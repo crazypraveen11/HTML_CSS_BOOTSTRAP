@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>navigation</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+        .content{
+            min-width: 500px;
+            background-image: linear-gradient(90deg,rgba(238, 30, 210, 0.719),rgb(243, 156, 56),rgba(128, 120, 244, 0.747));
+            transform: text;
+            color: transparent;
+            color: whitesmoke;
+            padding: 15px 0px;
+            font-family: sans-serif; 
+            border-radius: 15px;    
+        }
+        .child1{
+            color: whitesmoke;
+            font-family: 'Arial Bold';
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0px;
+            gap: 30px;
+        }
+        .child2{   
+            background: rgb(207, 195, 172);
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 15px;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: 3px solid;
+            border-radius: 10px;
+            border: hidden;
+            
+        }
+        .child2 a{
+            color: blue;
+            cursor: pointer;
+            
+        }
+        .child2 a:hover{
+            transition: .5s ease-in-out;
+            color: rgb(238, 97, 46);
+        }
+        .file{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .webapps{
+            background-color: rgb(14, 14, 14);
+            background-attachment: fixed;
+            gap: 15px;
+            height: 625px;
+            display: flex;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            justify-content: space-between;
+            border-radius: 15px;
+        }
+        .webapps p{
+            
+            color: rgb(10, 10, 10);       
+        
+        }
+        .box{
+            background-image: linear-gradient(90deg,rgb(226, 209, 75),rgb(53, 223, 99),rgb(47, 198, 249));
+            margin: 30px;
+            margin-top: 3px;
+            margin-bottom: 8px;
+            width: 40%;
+            text-align: center;
+            gap: 13px;
+            box-shadow: 15px 15px 20px black;
+            border-radius: 40px;
+            -webkit-background-clip:inherit;
+        }
+        .box:hover{
+            transition: .10sec;
+            transform:translatey(-14px)        
+        }
+        .box img
+        {
+            border-radius: 800px;
+            width: 200px;
+            height: 200px;
+            margin-top: 25px;
+        }
+        .mytraining
+        {
+            background-color: rgb(13, 13, 13);
+            text-align: center;
+            padding: 10px  50px;
+            font-size: larger;
+            margin-top: 4px;
+            margin-bottom: 2px;
+            height: 890px;
+            padding-top: 30px;
+            border-radius: 15px ;
+        }
+        p{
+            color: rgb(122, 115, 115);       
+        }
+        .mytraining p{
+            color: rgb(228, 225, 225);
+            font-size: large;
+            font-family:'Times New Roman', Times, serif;
+            padding-top: 20px;
+        }
+        .contact{
+            text-emphasis-color: blue;
+            background-color:skyblue;
+            padding: 30px 30px;
+            text-align: center;
+            height: 100;
+            width: 100; 
+        }
+        .maintable .form table{
+            background-color: rgb(31, 24, 130);
+            height: 200px;
+        }
+        .maintable{
+            background-color: rgb(8, 8, 8);
+            background-attachment: fixed;
+            gap: 15px;
+            height: 800px;
+            text-align: center;
+            padding-top: 10px;
+            border: 1px ;
+            border-radius: 15px;
+            margin-top: 3px; 
+            margin-bottom: 3px;       
+        }
+        .maintable .number{
+            color: black;     
+        }
+        .maintable .number p{
+            font-size: xx-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+            'Helvetica Neue', sans-serif;
+
+        }
+        .form{
+            text-align: center;
+            border-radius: 10px;
+            border: 2px solid;
+            margin-left: 600px;
+            margin-right: 600px;  
+            margin-bottom: 500px ; 
+            margin-top: 10px; 
+            width: 300px;
+            height: 430px; 
+            padding-top: 20px; 
+            padding-left: 20px; 
+            background-color: rgb(187, 167, 15);
+                
+        } 
+        .form label{
+                float: left;
+        }
+                
+        button{
+            border: 2px;
+            border-radius: 10px;
+            background-color: rgb(21, 98, 205);
+            color: white;
+            transition: .4sec;        
+        }
+        button:hover{
+            color: orange;
+            
+        }
+        .icon{
+           height: 60px;
+           width: 70px;
+           padding-left: 10px;
+        }
+         h4{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: underline solid;
+            font-style: oblique;
+            font-size: xx-large;
+            color: whitesmoke;
+            text-shadow: 0px 0px 16px rgb(117, 117, 117) ;
+            -webkit-background-clip:border-box;
+            text-shadow: 7px 3px 5px black;
+            
+        
+        }
+        h2{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-decoration: underline ;
+            font-style: oblique;
+            font-size: xx-large;
+            color: rgb(104, 99, 99);
+            text-shadow: 0px 0px 16px rgb(117, 117, 117) ;
+            -webkit-background-clip:border-box;
+        }
+        .mytraining .visual p {
+                 padding-top: 1px;
+                 color:orange;
+                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                 
+
+        }
+        .mytraining .option label {
+                 padding-top: 1px;
+                 color: rgb(73, 151, 156);
+
+
+        }
+        .maintable .number p{
+            color: whitesmoke;
+            font-family: cursive;
+
+        }
+        span{
+            color: red;
+            letter-spacing: 6px;
+        }
+        .icons a{
+            text-decoration: none;
+            color: #fff;
+            padding-right: 5px;
+            padding-left: 1px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0px ;
+            margin-right: 4px ;
+        
+        }
+        .icons ion-icon{
+              color: #fff;
+              font-size: 30px;
+              padding-left: 16px;
+              padding-top: 5px;
+              transition: 0.3s ease;
+              
+        }
+        .icons ion-icon:hover{
+             color: #ff7200;
+        }
+
+    </style>
+
+</head>
+<body >
+    <div class="content">
+        <div class="file">
+            <div class="child1">
+                <img class="icon" src="/HTML/images/ksr icon1.jpg" alt="unsupported" width="70px" height="50px">
+                <nav>
+                    <a href="">HOME</a>
+                    <a href="">WEB APPS</a>
+                    <a href="">MY TRAINING</a>
+                    <a href="">CONTACT</a>
+                </nav>
+            </div>
+            <div class="child2">
+                <a href="https://ksrce.ac.in/" type="button">LOG IN</a>
+            </div>
+        </div>
+    </div>
+        <div class="webapps">
+                   <div class="box">
+                    <img src="/HTML/images/wp logo.jfif">
+                    <h4 class="h4"><ins>WHATSAPP</ins></h4>
+                    <p>
+                        Our App
+                        More than 2 billion people in over 180 countries<br> use WhatsApp1 to stay in touch with friends and family,<br>
+                     anytime and anywhere. WhatsApp is free2 and offers simple, secure, reliable messaging and calling, available on phones all over
+                        the world.<br>
+                     Certainly! WhatsApp is a popular messaging app that allows<br>users to send text messages, make voice and video 
+                        calls,<br> share multimedia files, and more. It's widely used for<br> personal and business communication globally. 
+                        If you have specific questions, feel free to ask!
+                    </p>
+                    <a href="https://web.whatsapp.com">READMORE</a>
+                </div>
+                <div class="box">
+                    <img src="/HTML/images/fb logo.jfif">
+                    <h4><ins>FACEBOOK</ins></h4>
+                    <p>
+
+                        Facebook is a social media platformUsers can create<br> profiles, connect with friends, share posts, photos, and 
+                         videos,<br> and engage in various activities. 
+                        The Facebook app is a <br>mobile application that allows you to access.<br> Facebook social network from your smartphone
+                        or tablet.<br>profile, post and share photos and videos, chat 
+                        and call with <br>your friends and family
+                         Facebook owns<br> several other platforms, includes Instagram 
+                          and WhatsApp. <br>If you have more questions or need specific information,<br> feel free to ask!
+                        
+                    </p>
+                    <a href="https://www.facebook.com">READMORE</a>
+                </div>
+                <div class="box">
+                    
+                    <img src="/HTML/images/insta logo.jfif">
+                    <h4><ins>INSTAGRAM</ins></h4>
+                    <p>
+                        Instagram is a social media platform that lets you <br>share photos, videos, stories, and reels with your friends<br>
+                        and the world.
+                        Instagram is a popular photo and video-sharing.<br>
+                        Users can upload photos and videos, apply filters, and<br> share their content publicly or with selected followers.
+                        <br>Instagram also features Stories,  
+                         You can also shop products <br>from your favorite brands and creators, watch live streams,<br>
+                        play games, and chat with your contacts.If you have any <br>specific questions about Instagram, feel free to ask!
+                    </p>
+                    <a href="https://www.instagram.com">READMORE</a>
+                </div>
+        </div>
+    </div>
+
+    <div class="mytraining">
+            <div class="para">
+                    <h2>MY TRAINNING DETAILS</h2>
+                <div class="visual">
+                    <h4>3D Visualization</h4>
+                    <p>
+                       We make juicy and detailed architectural,interior and furniture visualization along with 3D animation.
+                       If seeing is believing, we can help your client <br> visualize project goals with photo-realistic renders
+                       that tell the story.Send us your floor plans,CAD files, and we'll create detailed,photo realistic 3D renders.
+                    </p>
+                    <br>
+
+                    <div class="option">
+                    <label> &diamond; 3D Interior Design & Rendering</label>
+                    <br><br>
+                    <label> &diamond; 3D Animation</label>
+                    <br><br>
+                    <label>&diamond; 3D Walkthroughs</label>
+                   </div>
+                </div>
+                <div class="visual">
+                    <h4>Image Editing</h4>
+                    <p>
+                        A complete Solutions for High Volume Image Editing services with perfection to the last pixel.
+                        Our photo editing services are designed to suit photographers, <br> advertising agencies, stock photo
+                        companies, e-commerce website and even museums.
+                    </p>
+                    <div class="option">
+                        <label>&diamond;Clipping Path</label><br><br>
+                        <label>&diamond;Image Masking</label><br><br>
+                        <label>&diamond;Colour Corection</label><br><br>
+                        <label>&diamond;Photo Retouching</label><br><br>
+                        <label>&diamond;Shadow & Reflection</label><br><br>
+                        <label>&diamond;Raster to Vector</label>
+                   </div>
+                </div>
+                    
+            </div>
+    </div>
+    <div class="maintable">
+        <div class="number">
+            <h2>CONTACT US</h2>
+            <p>
+                Lets create amazing <br>
+                <span>Customer</span> <br> experience
+                together
+            </p>
+            <div class="form">
+                    
+                        <tr>
+                            <td>
+                                <label>Name </label>
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td>
+                               <input type="text" placeholder="Enter your name">
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td>
+                                <label>Business Email </label>
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td>
+                                <input type="email" placeholder="Enter your business email">
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td>
+                                <label>Company </label>
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Enter your Company Email">
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td>
+                                <label>Contact Number </label>
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td>
+                                <input type="tel" placeholder="Enter your Contact Number">
+                            </td>
+                        </tr><br>
+                        <br>
+                        <tr>
+                            <td>
+                                <label>Enquiry </label>
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td>
+                                <textarea placeholder="What do you have in mind?"></textarea>
+                            </td>
+                        </tr>
+                        <br><br>
+                        <button type="submit">Get in Touch</button>
+                        <br><br><br>
+                    <div class="icons">
+                            <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="https://twitter.com/login"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="https://www.google.co.in/"><ion-icon name="logo-google"></ion-icon></a>
+                            <a href="https://www.skype.com/"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+                     
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
